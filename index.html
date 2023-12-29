@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .options button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .correct {
+            background-color: #a3e6a3;
+        }
+
+        .incorrect {
+            background-color: #ffb3b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>KNOW NIRAJAN BETTER</h2>
+
+    <div class="question" id="question1">
+        <p>When is the birthday of me?</p>
+        <div class="options">
+            <button onclick="checkAnswer(1, 1)">7 magh</button>
+            <button onclick="checkAnswer(1, 2)">8 magh</button>
+            <button onclick="checkAnswer(1, 3)">10 magh</button>
+            <button onclick="checkAnswer(1, 4)">12 magh</button>
+        </div>
+    </div>
+
+    <div class="question" id="question2">
+        <p>What thing i hate most? </p>
+        <div class="options">
+            <button onclick="checkAnswer(2, 1)">cooking</button>
+            <button onclick="checkAnswer(2, 2)">Cleaning home</button>
+            <button onclick="checkAnswer(2, 3)">Washing clothes</button>
+            <button onclick="checkAnswer(2, 4)">Wait someone</button>
+        </div>
+    </div>
+
+    <div class="question" id="question3">
+        <p>Which profression i admire most?</p>
+        <div class="options">
+            <button onclick="checkAnswer(3, 1)">Medicine</button>
+            <button onclick="checkAnswer(3, 2)">Engineering</button>
+            <button onclick="checkAnswer(3, 3)">Teaching</button>
+            <button onclick="checkAnswer(3, 4)">Lawyer</button>
+        </div>
+    </div>
+
+    <div class="question" id="question4">
+        <p>The person i love the most? </p>
+        <div class="options">
+            <button onclick="checkAnswer(4, 1)"> my family</button>
+            <button onclick="checkAnswer(4, 2)">friends</button>
+            <button onclick="checkAnswer(4, 3)">me</button>
+            <button onclick="checkAnswer(4, 4)">none</button>
+        </div>
+    </div>
+
+
+    <div class="question" id="question5">
+        <p>The person i wanna go on a date? </p>
+        <div class="options">
+            <button onclick="checkAnswer(5, 1)">Your girlbestfriend</button>
+            <button onclick="checkAnswer(5, 2)">Deepika padukone</button>
+            <button onclick="checkAnswer(5, 3)">Kylie Jenner</button>
+            <button onclick="checkAnswer(5, 4)">Srinkhala khatiwada</button>
+        </div>
+    </div>
+
+
+
+    <div class="question" id="question6">
+        <p>The flim i can  watch all the time ? </p>
+        <div class="options">
+            <button onclick="checkAnswer(6, 1)">Yhe jawani hai diwani</button>
+            <button onclick="checkAnswer(6, 2)"> 3 idoit</button>
+            <button onclick="checkAnswer(6, 3)">Jindagi nah milegi doobara</button>
+            <button onclick="checkAnswer(6, 4)">Loot</button>
+        </div>
+    </div>
+
+
+    <div class="question" id="question7">
+        <p>The peace of natural beauty for me? </p>
+        <div class="options">
+            <button onclick="checkAnswer(7, 1)">Moon</button>
+            <button onclick="checkAnswer(7, 2)">Sunset</button>
+            <button onclick="checkAnswer(7, 3)">Rain</button>
+            <button onclick="checkAnswer(7, 4)">Beach</button>
+        </div>
+    </div>
+
+    <div class="question" id="question8">
+        <p>The thing i cannot say easily? </p>
+        <div class="options">
+            <button onclick="checkAnswer(8, 1)">No to family members</button>
+            <button onclick="checkAnswer(8, 2)">Feelings for my crush</button>
+            <button onclick="checkAnswer(8, 3)">Rough word</button>
+            <button onclick="checkAnswer(8, 4)">How much i love mom and dad</button>
+        </div>
+    </div>
+
+
+    <div class="question" id="question9">
+        <p>The color i fell in love? </p>
+        <div class="options">
+            <button onclick="checkAnswer(9, 1)">Brownish black</button>
+            <button onclick="checkAnswer(9, 2)">Blue</button>
+            <button onclick="checkAnswer(9, 3)">Yellow</button>
+            <button onclick="checkAnswer(9, 4)">White</button>
+        </div>
+    </div>
+
+      
+    <div class="question" id="question10">
+        <p>The thing i like on free time? </p>
+        <div class="options">
+            <button onclick="checkAnswer(10, 1)">Read novels</button>
+            <button onclick="checkAnswer(10, 2)">Write poems</button>
+            <button onclick="checkAnswer(10, 3)">Watch movies</button>
+            <button onclick="checkAnswer(10, 4)">Go for a walk</button>
+        </div>
+    </div>
+
+
+    <div class="question" id="question11">
+        <p>What thing i will buy from my first salary? </p>
+        <div class="options">
+            <button onclick="checkAnswer(11, 1)">Watch</button>
+            <button onclick="checkAnswer(11, 2)">Camera</button>
+            <button onclick="checkAnswer(11, 3)">A gift for my mom</button>
+            <button onclick="checkAnswer(11, 4)">A vacation trip</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="result"></div>
+</div>
+
+<script>
+    let score = 0;
+
+    function checkAnswer(questionNumber, selectedOption) {
+        // Define the correct answers
+        const correctAnswers = {
+            1: 1, // Question 1, correct option is 1 (7 magh)
+            2: 3, // Question 2, correct option is 3 (Washing clothes)
+            3: 3, // Question 3, correct option is 3 (Teaching)
+            4: 3, // Question 4, correct option is 3(my)
+            5: 4, // Question 5
+            6: 1, // Question 6
+            7: 2, // Question 7
+            8: 1, // Question 8
+            9: 2, // Question 9
+            10: 3, // Question 10
+            11: 2, // Question 11
+
+
+
+
+        };
+
+        const isCorrect = selectedOption === correctAnswers[questionNumber];
+
+        const questionElement = document.getElementById(`question${questionNumber}`);
+        const options = questionElement.querySelectorAll('.options button');
+
+        // Highlight correct and incorrect options
+        options.forEach((option, index) => {
+            const isCorrectOption = index + 1 === correctAnswers[questionNumber];
+            if (isCorrectOption) {
+                option.classList.add('correct');
+            } else {
+                option.classList.add('incorrect');
+            }
+            option.disabled = true; // Disable buttons after selection
+        });
+
+        // Update the score
+        if (isCorrect) {
+            score++;
+        }
+
+        // Display the result
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `Your total score is: ${score} out of 11.`;
+    }
+</script>
+
+</body>
+</html>
